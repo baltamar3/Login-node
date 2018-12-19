@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%include partials/head%>
+</head>
+<body>
+    <header class="text-center">
+        <h1>profile</h1>
+        <a href="/logout" class="btn btn-light btn-sm">Logout</a>
+    </header>
+
+    <hr>
+
+    <div class="container">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                  <p>
+                    <strong>id</strong>: <%=user._id%>  
+                    <strong>email</strong>: <%=user.local.email%>
+                    <strong>password</strong>: <%=user.local.password%>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

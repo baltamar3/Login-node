@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <%include partials/head%>
+</head>
+<body>  
+    <div class="container">
+        <div class="col-sm-6 mx-auto">
+            <div class="card mt-100">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Login</h5>
+                    <% if(mensaje.length>0){%>
+                        <div class="alert alert-danger">
+                                <%=mensaje%>
+                        </div>
+                    <%}%>
+                    <form action="/login" method="POST">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password">
+                        </div>
+                        <input type="submit" class="btn btn-dark btn-block">
+                        <hr>
+                        <div class="text-center">
+                            <p>necesitas una cuenta? <a href="/singup">Singup</a></p>
+                            <p>o ir al inicio <a href="/">Home</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
